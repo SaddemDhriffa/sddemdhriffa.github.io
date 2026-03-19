@@ -1,43 +1,251 @@
-# Saddem Dhriffa
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saddem Dhriffa | WordPress Backend Developer</title>
 
-**Senior WordPress Backend Developer**  
-PHP | WordPress Architecture | REST APIs
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #3b82f6;
+    }
 
----
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
-## About Me
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
 
-Backend-focused WordPress developer with 6+ years of experience building custom plugins, scalable architectures, and API integrations.
+    /* NAVBAR */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(15, 23, 42, 0.9);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px;
+      z-index: 1000;
+      border-bottom: 1px solid #1f2937;
+    }
 
-Experienced working on large-scale and institutional platforms with strong requirements in performance, accessibility, and maintainability.
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+      transition: 0.3s;
+    }
 
----
+    nav a:hover {
+      color: var(--text);
+    }
 
-## Core Expertise
+    /* HERO */
+    .hero {
+      margin-top: 60px;
+    }
 
-- Custom WordPress Plugin Development  
-- WordPress (Bedrock, ACF, MVC structures)  
-- REST API Integration  
-- Performance Optimization (SEO / WPO)  
-- Docker / DDEV Environments  
-- MySQL / Apache Solr  
+    .banner {
+      height: 220px;
+      background: linear-gradient(120deg, #0ea5e9, #6366f1, #9333ea);
+    }
 
----
+    .profile {
+      max-width: 1000px;
+      margin: -80px auto 0;
+      padding: 20px;
+    }
 
-## Selected Projects
+    .profile-card {
+      background: var(--card);
+      padding: 30px;
+      border-radius: 12px;
+      position: relative;
+    }
 
-➡️ [View Projects](./projects)
+    .avatar {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 5px solid var(--card);
+      position: absolute;
+      top: -70px;
+      left: 30px;
+      background: #222;
+      object-fit: cover;
+    }
 
----
+    .profile-info {
+      margin-left: 180px;
+    }
 
-## Contact
+    h1 {
+      font-size: 32px;
+    }
 
-- Email: saddem.dhr@gmail.com  
-- Phone: (+216) 21 945 393
----
+    .subtitle {
+      color: var(--muted);
+      margin-top: 10px;
+      font-size: 16px;
+    }
 
-## 🛠 Core Skills
+    .location {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 14px;
+    }
 
+    /* SECTIONS */
+    section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 25px;
+      border-radius: 12px;
+    }
+
+    h2 {
+      margin-bottom: 15px;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    .project {
+      margin-bottom: 25px;
+    }
+
+    a.link {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a.link:hover {
+      text-decoration: underline;
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      .profile-info {
+        margin-left: 0;
+        margin-top: 80px;
+      }
+
+      .avatar {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      nav {
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="banner"></div>
+
+  <div class="profile">
+    <div class="profile-card">
+      <img src="profile.jpg" alt="Profile" class="avatar">
+
+      <div class="profile-info">
+        <h1>Saddem Dhriffa</h1>
+        <div class="subtitle">
+          PHP & WordPress Developer | Custom Backend Solutions | REST APIs
+        </div>
+        <div class="location">Sfax, Tunisia</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="card">
+    <h2>About</h2>
+    <p>
+      Backend-focused WordPress developer with 6+ years of experience building
+      custom plugins, scalable architectures, and API integrations.
+    </p>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="card">
+    <h2>Skills</h2>
+    <ul>
+      <li>WordPress (Custom Plugins, ACF, Bedrock)</li>
+      <li>PHP, MySQL, REST APIs</li>
+      <li>Docker, DDEV, Git</li>
+      <li>SEO / WPO Optimization</li>
+    </ul>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="card">
+    <h2>Projects</h2>
+
+    <div class="project">
+      <strong>Reservation Platform</strong><br>
+      <a href="#" class="link">https://example.com</a>
+      <p>Custom booking system, PayZen integration, performance optimization.</p>
+    </div>
+
+    <div class="project">
+      <strong>Institutional Platform</strong><br>
+      <a href="#" class="link">https://example.com</a>
+      <p>Advanced search (Solr), maintenance, accessibility improvements.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="card">
+    <h2>Contact</h2>
+    <p>Email: saddem.dhr@gmail.com</p>
+    <p>Phone: (+216) 21 945 393</p>
+  </div>
+</section>
+
+</body>
+</html>
 ### 🚀 Backend & CMS
 * **[span_7](start_span)[span_8](start_span)[span_9](start_span)Languages:** PHP (MVC patterns), SQL[span_7](end_span)[span_8](end_span)[span_9](end_span)
 * **[span_10](start_span)[span_11](start_span)WordPress:** Bedrock, DDEV, Docker, Custom Plugins[span_10](end_span)[span_11](end_span)
