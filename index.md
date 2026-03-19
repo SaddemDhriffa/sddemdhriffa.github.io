@@ -1,3 +1,7 @@
+---
+layout: default
+title: Portfolio
+---
 Saddem Dhriffa | PHP & WordPress Backend Developer
 Bridging the gap between robust backend architecture and seamless user experiences.
 👋 About Me
