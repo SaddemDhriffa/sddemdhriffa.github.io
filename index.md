@@ -1,22 +1,39 @@
----
-layout: default
-title: Saddem Dhriffa | Portfolio
-theme: jekyll-theme-cayman
----
+# Saddem Dhriffa
 
-# 👨‍💻 Saddem Dhriffa
-### PHP & WordPress Backend Developer
-
-**Bridging the gap between robust backend architecture and seamless user experiences.**
+**Senior WordPress Backend Developer**  
+PHP | WordPress Architecture | REST APIs
 
 ---
 
-## 👋 About Me
+## About Me
 
-Hello! [span_1](start_span)I am a passionate **Senior Web Developer** with over 6 years of experience specializing in the PHP and WordPress ecosystems[span_1](end_span). My journey is defined by a unique blend of technical rigor and design sensitivity; [span_2](start_span)I don't just write code that works—I build scalable, modular systems designed with the end-user in mind[span_2](end_span).
+Backend-focused WordPress developer with 6+ years of experience building custom plugins, scalable architectures, and API integrations.
 
-[span_3](start_span)Throughout my career, I’ve navigated the full development lifecycle, from conceptualizing complex UI/UX designs in Figma to deploying high-performance backend solutions for government-grade platforms[span_3](end_span). [span_4](start_span)[span_5](start_span)[span_6](start_span)I thrive in collaborative environments where I can leverage my expertise in **REST APIs, custom plugin development, and DevOps workflows** to solve intricate technical challenges[span_4](end_span)[span_5](end_span)[span_6](end_span).
+Experienced working on large-scale and institutional platforms with strong requirements in performance, accessibility, and maintainability.
 
+---
+
+## Core Expertise
+
+- Custom WordPress Plugin Development  
+- WordPress (Bedrock, ACF, MVC structures)  
+- REST API Integration  
+- Performance Optimization (SEO / WPO)  
+- Docker / DDEV Environments  
+- MySQL / Apache Solr  
+
+---
+
+## Selected Projects
+
+➡️ [View Projects](./projects)
+
+---
+
+## Contact
+
+- Email: saddem.dhr@gmail.com  
+- Phone: (+216) 21 945 393
 ---
 
 ## 🛠 Core Skills
