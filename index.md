@@ -54,6 +54,5 @@ Entrepreneurship: CEFE Certification (Bureau d'emploi de Mahdia)
 🤝 Let's Connect
 I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
 Email: saddem.dhr@gmail.com
-LinkedIn: [Your LinkedIn Profile Link]
-GitHub: [Your GitHub Profile Link]
+LinkedIn: https://www.linkedin.com/in/saddem-dhriffa
 Phone: +216 21 945 393
