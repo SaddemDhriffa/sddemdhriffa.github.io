@@ -107,11 +107,15 @@ button:hover {
 }
 
 /* VERTICAL MENU */
-.menu {
+/*.menu {
   position: fixed;
-  left: 25px;
+  
   top: 50%;
   transform: translateY(-50%);
+}*/
+.menu {
+  left: 10px;
+  opacity: 0.7;
 }
 
 .menu a {
@@ -162,12 +166,46 @@ button:hover {
     object-position: top;
   }
 }
+.mobile-nav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  .mobile-nav {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--bg);
+    padding: 10px 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--soft);
+  }
+
+  .mobile-nav a {
+    text-decoration: none;
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+  .hero {
+    margin-top: 60px;
+  }
+}
 </style>
 </head>
 
 <body>
 
 <!-- VERTICAL MENU -->
+<div class="mobile-nav">
+  <a href="#">About</a>
+  <a href="#">Skills</a>
+  <a href="#">Projects</a>
+  <a href="#">Contact</a>
+</div>
 <div class="menu">
   <a href="#">About</a>
   <a href="#">Skills</a>
