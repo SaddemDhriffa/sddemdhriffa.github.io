@@ -6,7 +6,7 @@
 <title>Saddem Dhriffa | Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-
+<script src="https://unpkg.com/lucide@latest"></script>
 <style>
 :root {
   /* Editorial Palette - Pulled from your photo's jacket/skin tones */
@@ -369,11 +369,49 @@ h1 {
     gap: 4px;
   }
 }
+/* --- FLOATING CONTACT BAR --- */
+.contact-bar {
+  position: fixed;
+  right: 30px;
+  bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 1000;
+}
+
+.contact-bar a {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.contact-bar a:hover {
+  background: var(--text-main);
+  color: #fff;
+  transform: translateY(-2px);
+}
 </style>
 </head>
 
 <body>
+<div class="contact-bar">
+  <a href="mailto:your@email.com"><i data-lucide="mail"></i></a>
+  <a href="https://linkedin.com" target="_blank"><i data-lucide="linkedin"></i></a>
+  <a href="https://wa.me/216XXXXXXXX" target="_blank"><i data-lucide="message-circle"></i></a>
+</div>
 
+<script>
+  lucide.createIcons();
+</script>
 <nav class="mobile-nav">
   <a href="#">About</a>
   <a href="#">Skills</a>
