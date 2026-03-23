@@ -283,6 +283,92 @@ h1 {
     transform: none;
   }
 }
+/* --- EXPERIENCE --- */
+.experience {
+  padding: 120px 10% 80px 15%;
+}
+
+.exp-item {
+  padding: 30px 0;
+  border-bottom: 1px solid var(--soft-accent);
+}
+
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.exp-header h3 {
+  font-size: 20px;
+  margin: 0;
+  font-weight: 400;
+}
+
+.exp-header span {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.exp-date {
+  display: block;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 6px 0 10px;
+}
+
+.exp-item p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 300;
+}
+
+/* --- EDUCATION --- */
+.education {
+  padding: 80px 10% 80px 15%;
+}
+
+.edu-item {
+  padding: 20px 0;
+}
+
+.edu-item h3 {
+  font-size: 18px;
+  margin: 0;
+  font-weight: 400;
+}
+
+.edu-school {
+  display: block;
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.edu-date {
+  display: block;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+
+  .experience,
+  .skills,
+  .education,
+  .contact {
+    padding: 80px 24px;
+    text-align: center;
+  }
+
+  .exp-header {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
 </style>
 </head>
 
