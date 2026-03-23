@@ -1,1 +1,611 @@
-###this is the old index file###
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saddem Dhriffa | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+:root {
+  /* Editorial Palette - Pulled from your photo's jacket/skin tones */
+  --bg: #F2EDE9; 
+  --soft-accent: #E5DED8;
+  --text-main: #2D2A26;
+  --text-muted: #8C857E;
+  --accent-gold: #B5A48B; /* Subtle hover color */
+}
+
+* { box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg);
+  color: var(--text-main);
+  overflow-x: hidden;
+}
+
+/* --- NAVIGATION --- */
+/* Desktop: Minimalist Side Rail */
+.side-nav {
+  position: fixed;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 100;
+}
+
+.side-nav a {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: var(--text-muted);
+  writing-mode: vertical-rl; /* Vertical text for a boutique feel */
+  transform: rotate(180deg);
+  transition: 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.side-nav a:hover {
+  color: var(--text-main);
+  transform: rotate(180deg) translateY(5px);
+}
+
+/* Mobile: Top Clean Bar */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 0; width: 100%;
+  padding: 20px;
+  background: rgba(242, 237, 233, 0.9);
+  backdrop-filter: blur(10px);
+  justify-content: space-around;
+  z-index: 1000;
+  border-bottom: 1px solid var(--soft-accent);
+}
+
+.mobile-nav a { text-decoration: none; color: var(--text-muted); font-size: 12px; font-weight: 500; }
+
+/* --- HERO LAYOUT --- */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 0 10% 0 15%; /* Extra left padding for the side-nav */
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.content {
+  flex: 1;
+  max-width: 500px;
+  opacity: 0; /* For a soft entrance animation */
+  animation: fadeIn 1.2s ease forwards 0.3s;
+}
+
+h1 {
+  font-size: clamp(48px, 6vw, 84px);
+  line-height: 0.95;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+  letter-spacing: -0.03em;
+}
+
+.subtitle {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+  display: block;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-main);
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+
+.cta {
+  padding: 14px 32px;
+  border-radius: 50px;
+  border: 1px solid var(--text-main);
+  background: transparent;
+  font-family: inherit;
+  font-size: 13px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.cta:hover {
+  background: var(--text-main);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* --- IMAGE SECTION --- */
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+/* The 'Arch' Shape & Glow */
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  aspect-ratio: 4/5;
+  border-radius: 220px 220px 30px 30px; /* Editorial Arch */
+  overflow: hidden;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.08);
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.image-wrapper:hover img {
+  transform: scale(1.03);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+  .side-nav { display: none; }
+  .mobile-nav { display: flex; }
+
+  .hero {
+    flex-direction: column-reverse;
+    padding: 120px 24px 60px 24px;
+    text-align: center;
+    gap: 50px;
+  }
+
+  .image-wrapper {
+    max-width: 300px;
+    border-radius: 150px 150px 20px 20px;
+  }
+}
+/* --- PROJECTS SECTION --- */
+.projects {
+  padding: 120px 10% 120px 15%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.projects-container {
+  max-width: 900px;
+}
+
+.projects-title {
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 60px;
+  letter-spacing: -0.02em;
+}
+
+/* Each project */
+.project-item {
+  padding: 32px 0;
+  border-bottom: 1px solid var(--soft-accent);
+  transition: all 0.4s ease;
+}
+
+/* Hover interaction (premium feel) */
+.project-item:hover {
+  transform: translateX(8px);
+}
+
+/* Header row */
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 20px;
+}
+
+.project-header h3 {
+  font-size: 22px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.project-header a {
+  font-size: 13px;
+  text-decoration: none;
+  color: var(--text-muted);
+  transition: 0.3s;
+}
+
+.project-header a:hover {
+  color: var(--text-main);
+}
+
+/* Role */
+.project-role {
+  display: block;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 8px 0 10px;
+}
+
+/* Description */
+.project-item p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 300;
+}
+
+/* Private label */
+.no-link {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* --- MOBILE --- */
+@media (max-width: 900px) {
+
+  .projects {
+    padding: 80px 24px;
+  }
+
+  .projects-title {
+    text-align: center;
+  }
+
+  .project-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .project-item:hover {
+    transform: none;
+  }
+}
+/* --- EXPERIENCE --- */
+.experience {
+  padding: 120px 10% 80px 15%;
+}
+
+.exp-item {
+  padding: 30px 0;
+  border-bottom: 1px solid var(--soft-accent);
+}
+
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.exp-header h3 {
+  font-size: 20px;
+  margin: 0;
+  font-weight: 400;
+}
+
+.exp-header span {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.exp-date {
+  display: block;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 6px 0 10px;
+}
+
+.exp-item p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 300;
+}
+
+/* --- EDUCATION --- */
+.education {
+  padding: 80px 10% 80px 15%;
+}
+
+.edu-item {
+  padding: 20px 0;
+}
+
+.edu-item h3 {
+  font-size: 18px;
+  margin: 0;
+  font-weight: 400;
+}
+
+.edu-school {
+  display: block;
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.edu-date {
+  display: block;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+
+  .experience,
+  .skills,
+  .education,
+  .contact {
+    padding: 80px 24px;
+    text-align: center;
+  }
+
+  .exp-header {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+/* --- FLOATING CONTACT BAR --- */
+.contact-bar {
+  position: fixed;
+  right: 30px;
+  bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 1000;
+}
+
+.contact-bar a {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.contact-bar a:hover {
+  background: var(--text-main);
+  color: #fff;
+  transform: translateY(-2px);
+}
+</style>
+</head>
+
+<body>
+<div class="contact-bar">
+  <a href="mailto:your@email.com"><i data-lucide="mail"></i></a>
+  <a href="https://linkedin.com" target="_blank"><i data-lucide="linkedin"></i></a>
+  <a href="https://wa.me/216XXXXXXXX" target="_blank"><i data-lucide="message-circle"></i></a>
+</div>
+
+<script>
+  lucide.createIcons();
+</script>
+<nav class="mobile-nav">
+  <a href="#">About</a>
+  <a href="#">Skills</a>
+  <a href="#">Projects</a>
+  <a href="#">Contact</a>
+</nav>
+
+<div class="side-nav">
+  <a href="#">About</a>
+  <a href="#">Skills</a>
+  <a href="#">Projects</a>
+  <a href="#">Contact</a>
+</div>
+
+<section class="hero">
+  <div class="content">
+    <span class="subtitle">WordPress Backend Developer</span>
+    <h1>Saddem<br>Dhriffa</h1>
+    <p class="description">
+      Specializing in bespoke plugin architecture and high-performance backend systems for the modern web.
+    </p>
+    <button class="cta">Get in Touch</button>
+  </div>
+
+  <div class="image-container">
+    <div class="image-wrapper">
+      <img src="assets/profile.png" alt="Saddem Dhriffa">
+    </div>
+  </div>
+</section>
+
+<section class="projects" id="projects">
+  <div class="projects-container">
+
+    <h2 class="projects-title">Projects</h2>
+
+    <div class="project-item">
+      <div class="project-header">
+        <h3>Beauvaisis (Agglomération)</h3>
+        <a href="https://www.beauvaisis.fr/" target="_blank">beauvaisis.fr ↗</a>
+      </div>
+      <span class="project-role">Backend Developer</span>
+      <p>
+        Built and maintained backend features for a public sector platform.
+        Developed custom WordPress modules and collaborated on dynamic components such as carousels and interactive maps.
+      </p>
+    </div>
+
+    <div class="project-item">
+      <div class="project-header">
+        <h3>CHU Limoges</h3>
+        <a href="https://www.chu-limoges.fr/" target="_blank">chu-limoges.fr ↗</a>
+      </div>
+      <span class="project-role">Backend Developer</span>
+      <p>
+        Maintained and improved a large-scale WordPress platform.
+        Enhanced search capabilities using Apache Solr and developed custom modules.
+      </p>
+    </div>
+
+    <div class="project-item">
+      <div class="project-header">
+        <h3>La Gaude</h3>
+        <a href="https://www.lagaude.fr/" target="_blank">lagaude.fr ↗</a>
+      </div>
+      <span class="project-role">Backend Developer</span>
+      <p>
+        Improved integration between WordPress backend and mobile application.
+        Enhanced API reliability and resolved synchronization issues.
+      </p>
+    </div>
+
+    <div class="project-item">
+      <div class="project-header">
+        <h3>Ville de Tours</h3>
+        <a href="https://www.stratis.fr/creations/ville-de-tours" target="_blank">stratis.fr ↗</a>
+      </div>
+      <span class="project-role">Backend Developer</span>
+      <p>
+        Delivered continuous improvements and handled client-driven updates.
+        Worked closely with support teams on fixes and feature enhancements.
+      </p>
+    </div>
+
+    <div class="project-item">
+      <div class="project-header">
+        <h3>Musée des Beaux-Arts de Tours</h3>
+        <a href="https://www.stratis.fr/creation/musee-des-beaux-arts-de-tours/" target="_blank">stratis.fr ↗</a>
+      </div>
+      <span class="project-role">Backend Developer</span>
+      <p>
+        Supported backend development and improved existing WordPress modules.
+        Handled maintenance and post-launch enhancements.
+      </p>
+    </div>
+
+    <div class="project-item">
+      <div class="project-header">
+        <h3>Musées de Tours</h3>
+        <a href="https://musees.tours.fr/" target="_blank">musees.tours.fr ↗</a>
+      </div>
+      <span class="project-role">Backend Developer</span>
+      <p>
+        Assisted in post-launch maintenance and ensured platform stability.
+        Collaborated with project teams on updates and fixes.
+      </p>
+    </div>
+
+    <div class="project-item">
+      <div class="project-header">
+        <h3>Custom Modules</h3>
+        <span class="no-link">Private</span>
+      </div>
+      <span class="project-role">Backend Developer</span>
+      <p>
+        Developed reusable WordPress modules including booking systems with PayZen integration and event management features.
+        Focused on performance and seamless integration.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section class="experience" id="experience">
+  <div class="section-container">
+    <h2 class="section-title">Experience</h2>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <h3>WordPress Backend Developer</h3>
+        <span>Stratis</span>
+      </div>
+      <span class="exp-date">2023 — 2025</span>
+      <p>
+        Worked on multiple public sector and institutional platforms.
+        Developed custom WordPress modules, handled post-launch maintenance,
+        and contributed to API integrations and search optimization using Apache Solr.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="skills" id="skills">
+  <div class="section-container">
+    <h2 class="section-title">Skills</h2>
+
+    <div class="skills-group">
+      <span>Backend</span>
+      <p>PHP, WordPress, MySQL</p>
+    </div>
+
+    <div class="skills-group">
+      <span>Frontend</span>
+      <p>HTML, CSS, JavaScript</p>
+    </div>
+
+    <div class="skills-group">
+      <span>Tools</span>
+      <p>Git, REST APIs, Apache Solr, Performance Optimization</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="education" id="education">
+  <div class="section-container">
+    <h2 class="section-title">Education</h2>
+
+    <div class="edu-item">
+      <h3>Your Degree / Field</h3>
+      <span class="edu-school">Your University</span>
+      <span class="edu-date">Year — Year</span>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="contact" id="contact">
+  <div class="section-container">
+    <h2 class="section-title">Contact</h2>
+
+    <p class="contact-text">
+      Open to new opportunities and collaborations.
+    </p>
+
+    <div class="contact-links">
+      <a href="mailto:your@email.com">your@email.com</a>
+      <a href="#" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>###this is the old index file###
