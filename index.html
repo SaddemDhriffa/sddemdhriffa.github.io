@@ -185,6 +185,104 @@ h1 {
     border-radius: 150px 150px 20px 20px;
   }
 }
+/* --- PROJECTS SECTION --- */
+.projects {
+  padding: 120px 10% 120px 15%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.projects-container {
+  max-width: 900px;
+}
+
+.projects-title {
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 60px;
+  letter-spacing: -0.02em;
+}
+
+/* Each project */
+.project-item {
+  padding: 32px 0;
+  border-bottom: 1px solid var(--soft-accent);
+  transition: all 0.4s ease;
+}
+
+/* Hover interaction (premium feel) */
+.project-item:hover {
+  transform: translateX(8px);
+}
+
+/* Header row */
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 20px;
+}
+
+.project-header h3 {
+  font-size: 22px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.project-header a {
+  font-size: 13px;
+  text-decoration: none;
+  color: var(--text-muted);
+  transition: 0.3s;
+}
+
+.project-header a:hover {
+  color: var(--text-main);
+}
+
+/* Role */
+.project-role {
+  display: block;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 8px 0 10px;
+}
+
+/* Description */
+.project-item p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 300;
+}
+
+/* Private label */
+.no-link {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* --- MOBILE --- */
+@media (max-width: 900px) {
+
+  .projects {
+    padding: 80px 24px;
+  }
+
+  .projects-title {
+    text-align: center;
+  }
+
+  .project-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .project-item:hover {
+    transform: none;
+  }
+}
 </style>
 </head>
 
@@ -218,6 +316,98 @@ h1 {
     <div class="image-wrapper">
       <img src="assets/profile.png" alt="Saddem Dhriffa">
     </div>
+  </div>
+</section>
+
+<section class="projects" id="projects">
+  <div class="projects-container">
+
+    <h2 class="projects-title">Projects</h2>
+
+    <div class="project-item">
+      <div class="project-header">
+        <h3>Beauvaisis (Agglomération)</h3>
+        <a href="https://www.beauvaisis.fr/" target="_blank">beauvaisis.fr ↗</a>
+      </div>
+      <span class="project-role">Backend Developer</span>
+      <p>
+        Built and maintained backend features for a public sector platform.
+        Developed custom WordPress modules and collaborated on dynamic components such as carousels and interactive maps.
+      </p>
+    </div>
+
+    <div class="project-item">
+      <div class="project-header">
+        <h3>CHU Limoges</h3>
+        <a href="https://www.chu-limoges.fr/" target="_blank">chu-limoges.fr ↗</a>
+      </div>
+      <span class="project-role">Backend Developer</span>
+      <p>
+        Maintained and improved a large-scale WordPress platform.
+        Enhanced search capabilities using Apache Solr and developed custom modules.
+      </p>
+    </div>
+
+    <div class="project-item">
+      <div class="project-header">
+        <h3>La Gaude</h3>
+        <a href="https://www.lagaude.fr/" target="_blank">lagaude.fr ↗</a>
+      </div>
+      <span class="project-role">Backend Developer</span>
+      <p>
+        Improved integration between WordPress backend and mobile application.
+        Enhanced API reliability and resolved synchronization issues.
+      </p>
+    </div>
+
+    <div class="project-item">
+      <div class="project-header">
+        <h3>Ville de Tours</h3>
+        <a href="https://www.stratis.fr/creations/ville-de-tours" target="_blank">stratis.fr ↗</a>
+      </div>
+      <span class="project-role">Backend Developer</span>
+      <p>
+        Delivered continuous improvements and handled client-driven updates.
+        Worked closely with support teams on fixes and feature enhancements.
+      </p>
+    </div>
+
+    <div class="project-item">
+      <div class="project-header">
+        <h3>Musée des Beaux-Arts de Tours</h3>
+        <a href="https://www.stratis.fr/creation/musee-des-beaux-arts-de-tours/" target="_blank">stratis.fr ↗</a>
+      </div>
+      <span class="project-role">Backend Developer</span>
+      <p>
+        Supported backend development and improved existing WordPress modules.
+        Handled maintenance and post-launch enhancements.
+      </p>
+    </div>
+
+    <div class="project-item">
+      <div class="project-header">
+        <h3>Musées de Tours</h3>
+        <a href="https://musees.tours.fr/" target="_blank">musees.tours.fr ↗</a>
+      </div>
+      <span class="project-role">Backend Developer</span>
+      <p>
+        Assisted in post-launch maintenance and ensured platform stability.
+        Collaborated with project teams on updates and fixes.
+      </p>
+    </div>
+
+    <div class="project-item">
+      <div class="project-header">
+        <h3>Custom Modules</h3>
+        <span class="no-link">Private</span>
+      </div>
+      <span class="project-role">Backend Developer</span>
+      <p>
+        Developed reusable WordPress modules including booking systems with PayZen integration and event management features.
+        Focused on performance and seamless integration.
+      </p>
+    </div>
+
   </div>
 </section>
 
