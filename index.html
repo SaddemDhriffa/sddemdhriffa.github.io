@@ -26,7 +26,9 @@ body {
   color: var(--text-main);
   overflow-x: hidden;
 }
-
+.section-container {
+  max-width: 900px;
+}
 /* --- NAVIGATION --- */
 /* Desktop: Minimalist Side Rail */
 .side-nav {
@@ -447,8 +449,40 @@ h1 {
     gap: 4px;
   }
 }
+.skills,
+.contact {
+  padding: 80px 10% 80px 15%;
+}
+@media (min-width: 900px) and (max-width: 1200px) {
+  .hero,
+  .projects,
+  .experience,
+  .education,
+  .skills,
+  .contact,
+  .about {
+    padding-left: 18%;
+  }
+}
+.contact-links a {
+  display: inline-block;
+  margin-right: 16px;
+  text-decoration: none;
+  color: var(--text-main);
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.contact-links a:hover {
+  color: var(--accent-gold);
+}
 html {
   scroll-behavior: smooth;
+}
+.contact-bar i,
+.contact-bar svg {
+  width: 18px;
+  height: 18px;
 }
 </style>
 </head>
@@ -456,7 +490,11 @@ html {
 <body>
 <div class="contact-bar">
   <a href="mailto:saddem.dhr@gmail.com"><i data-lucide="mail"></i></a>
-  <a href="https://www.linkedin.com/in/saddem-dhriffa" target="_blank"><i data-lucide="linkedin"></i></a>
+  <a href="https://www.linkedin.com/in/saddem-dhriffa" target="_blank">
+  <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4zM8.5 8h3.8v2.2h.1c.5-.9 1.8-2.2 3.7-2.2 4 0 4.7 2.6 4.7 6V24h-4v-7.5c0-1.8 0-4-2.4-4s-2.8 1.9-2.8 3.8V24h-4z"/>
+  </svg>
+</a>
   <a href="https://wa.me/21621945393" target="_blank"><i data-lucide="message-circle"></i></a>
 </div>
 
@@ -663,7 +701,7 @@ Created 20+ Design Systems and high-fidelity wireframes in Figma.
     </p>
 
     <div class="contact-links">
-      <a href="mailto: saddem.dhr@gmail.com">saddem.dhr@gmail.com</a>
+      <a href="mailto:saddem.dhr@gmail.com">saddem.dhr@gmail.com</a>
       <a href="https://www.linkedin.com/in/saddem-dhriffa" target="_blank">LinkedIn</a>
     </div>
   </div>
