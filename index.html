@@ -399,31 +399,79 @@ h1 {
   color: #fff;
   transform: translateY(-2px);
 }
+/* --- ABOUT --- */
+.about {
+  padding: 120px 10% 80px 15%;
+  max-width: 900px;
+}
+
+.about-title {
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  letter-spacing: -0.02em;
+}
+
+.about p {
+  font-size: 15px;
+  line-height: 1.7;
+  font-weight: 300;
+  margin-bottom: 16px;
+}
+
+/* remove markdown bold leftovers */
+.about p strong {
+  font-weight: 500;
+}
+@media (max-width: 900px) {
+
+  .experience,
+  .skills,
+  .education,
+  .contact {
+    padding: 80px 24px;
+    text-align: left; /* ← FIX */
+  }
+
+  .projects-title {
+    text-align: left; /* ← FIX */
+  }
+
+  .section-title {
+    text-align: left;
+  }
+
+  .exp-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
 </style>
 </head>
 
 <body>
 <div class="contact-bar">
-  <a href="mailto:your@email.com"><i data-lucide="mail"></i></a>
-  <a href="https://linkedin.com" target="_blank"><i data-lucide="linkedin"></i></a>
-  <a href="https://wa.me/216XXXXXXXX" target="_blank"><i data-lucide="message-circle"></i></a>
+  <a href="mailto:saddem.dhr@gmail.com"><i data-lucide="mail"></i></a>
+  <a href="https://www.linkedin.com/in/saddem-dhriffa" target="_blank"><i data-lucide="linkedin"></i></a>
+  <a href="https://wa.me/21621945393" target="_blank"><i data-lucide="message-circle"></i></a>
 </div>
 
-<script>
-  lucide.createIcons();
-</script>
 <nav class="mobile-nav">
-  <a href="#">About</a>
-  <a href="#">Skills</a>
-  <a href="#">Projects</a>
-  <a href="#">Contact</a>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
 </nav>
 
 <div class="side-nav">
-  <a href="#">About</a>
-  <a href="#">Skills</a>
-  <a href="#">Projects</a>
-  <a href="#">Contact</a>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
 </div>
 
 <section class="hero">
@@ -442,10 +490,10 @@ h1 {
     </div>
   </div>
 </section>
-<section class=about" id=about">
+<section class="about" id="about">
 <h2 class=about-title">About me</h2>
 <p>Hello!</p>
-<p>I am a passionate **Senior Web Developer** with over 6 years of experience specializing in the PHP and WordPress ecosystems. My journey is defined by a unique blend of technical rigor and design sensitivity; I don't just write code that works—I build scalable, modular systems designed with the end-user in mind.</p>
+<p>I am a passionate <strong>Senior Web Developer</strong> with over 6 years of experience specializing in the PHP and WordPress ecosystems. My journey is defined by a unique blend of technical rigor and design sensitivity; I don't just write code that works—I build scalable, modular systems designed with the end-user in mind.</p>
 <p>Throughout my career, I’ve navigated the full development lifecycle, from conceptualizing complex UI/UX designs in Figma to deploying high-performance backend solutions for government-grade platforms.</p>
 <p>I thrive in collaborative environments where I can leverage my expertise in **REST APIs, custom plugin development, and DevOps workflows to solve intricate technical challenges.</p>
 </section>
@@ -509,10 +557,8 @@ h1 {
       </div>
       <span class="project-role">Backend Developer</span>
       <p>
-        Assisted in post-launch maintenance and ensured platform stability.
-        Collaborated with project teams on updates and fixes.
-Supported backend development and improved existing WordPress modules.
-        Handled maintenance and post-launch enhancements.
+        Maintained and improved WordPress modules.
+Handled post-launch enhancements and performance optimization.
       </p>
     </div>
 
@@ -622,5 +668,7 @@ Created 20+ Design Systems and high-fidelity wireframes in Figma.
     </div>
   </div>
 </section>
-
+<script>
+  lucide.createIcons();
+</script>
 </body>
